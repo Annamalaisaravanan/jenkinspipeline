@@ -1,11 +1,12 @@
 pipeline {
      agent any
      stages {
-          stage ('Extra Path') {
-    withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {
-      sh '//code block'
-    }
-  }
+
+         stage('Hello'){
+                   steps {
+                    sh 'echo "Fuck off Hello!!!!!!!!!!!!!!!"'
+                   }
+         }
          stage('Build') {
              steps {
                  sh 'echo "Hello World"'
