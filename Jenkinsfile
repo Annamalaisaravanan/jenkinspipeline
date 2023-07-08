@@ -2,6 +2,15 @@ pipeline {
      agent any
      stages {
 
+         stage("Environment"){
+            steps{
+                withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {  
+          sh '''
+            //code block
+          '''
+        }
+            }
+         }
          stage('Hello'){
                    steps {
                     sh 'echo "Fuck off Hello!!!!!!!!!!!!!!!"'
